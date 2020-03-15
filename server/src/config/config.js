@@ -2,7 +2,7 @@ const path = require('path')
 
 // connecting to port and db
 module.exports = {
-  port: 8081,
+  port: process.env.PORT || 8081,
   db: {
     database: process.env.DB_NAME || 'musictracker',
     user: process.env.DB_USER || 'root',

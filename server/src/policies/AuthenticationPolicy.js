@@ -1,13 +1,12 @@
-// Joi is used for validating different things in express
 const Joi = require('joi')
 
 module.exports = {
   register (req, res, next) {
     const schema = {
       email: Joi.string().email(),
-      password: Joi.string().regex(
-        new RegExp('^[a-zA-Z0-9]{8,32}$')
-      )
+      password: Joi.string()
+      .regex(new RegExp(/^[a-zA-Z0-9]{8,32}$/))
+      .required()
     }
 
     const {error} = Joi.validate(req.body, schema)
@@ -31,11 +30,11 @@ module.exports = {
           break
         default:
           res.status(400).send({
-            error: 'Invalid registration information.'
+            error: 'Invalid registration information'
           })
       }
     } else {
-      next() // calling next() for different method in the routes file
+      next()
     }
   }
 }
