@@ -1,50 +1,52 @@
 <template>
-  <v-container>
-    <v-hover>
-      <template v-slot="{ hover }">
-        <v-card class="mx-auto" max-width="550" height="570" :elevation="hover ? 10 : 4">
-            <section>
-              <v-col xs="12">
-                <div class="text-center">
-                  <h1 class="mt-12">Registration</h1>
-                </div>
-              </v-col>
-            </section>
+  <div class="register">
+    <v-container>
+      <v-hover>
+        <template v-slot="{ hover }">
+          <v-card class="mx-auto" max-width="550" height="570" :elevation="hover ? 10 : 4">
+              <section>
+                <v-col xs="12">
+                  <div class="text-center">
+                    <h1 class="mt-12">Registration</h1>
+                  </div>
+                </v-col>
+              </section>
 
-            <v-row class="justify-center">
-              <v-col xs="6" sm="9" md="8">
-                <v-card-text>
-                  <v-form class="px-3" ref="form">
-                    <v-text-field
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                    v-model="email"
-                    prepend-icon="mdi-email-outline"
-                    >
-                    </v-text-field>
-                    <br>
-                    <v-text-field
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    v-model="password"
-                    prepend-icon="mdi-format-text "
-                    >
-                    </v-text-field>
-                    <br>
-                    <div class="errortext" v-html="error" />
-                    <br>
-                    <br>
-                    <v-btn color="primary" @click="register">Register</v-btn>
-                  </v-form>
-                </v-card-text>
-              </v-col>
-            </v-row>
-        </v-card>
-      </template>
-    </v-hover>
-  </v-container>
+              <v-row class="justify-center">
+                <v-col xs="6" sm="9" md="8">
+                  <v-card-text>
+                    <v-form class="px-3" ref="form">
+                      <v-text-field
+                      type="email"
+                      name="email"
+                      placeholder="E-mail"
+                      v-model="email"
+                      prepend-icon="mdi-email-outline"
+                      >
+                      </v-text-field>
+                      <br>
+                      <v-text-field
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      v-model="password"
+                      prepend-icon="mdi-format-text "
+                      >
+                      </v-text-field>
+                      <br>
+                      <div class="errortext" v-html="error" />
+                      <br>
+                      <br>
+                      <v-btn color="primary" @click="register">Register</v-btn>
+                    </v-form>
+                  </v-card-text>
+                </v-col>
+              </v-row>
+          </v-card>
+        </template>
+      </v-hover>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -74,8 +76,10 @@ export default {
 </script>
 
 <style scoped>
-
 .errortext {
   color: red;
+}
+.register {
+  margin-top: 50px;
 }
 </style>
