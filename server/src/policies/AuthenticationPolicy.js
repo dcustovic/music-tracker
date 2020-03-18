@@ -15,7 +15,7 @@ module.exports = {
       switch (error.details[0].context.key) {
         case 'email':
           res.status(400).send({
-            error: 'You must provide a valid e-mail address.'
+            error: 'You must provide a valid e-mail address'
           })
           break
         case 'password':
@@ -23,7 +23,7 @@ module.exports = {
             error: `The password provided failed to match the following rules:
               <br>
               <br>
-              • It must be at least 8 characters in length and not greater than 32 characters.
+              • It must be at least 8 characters in length and not greater than 32 characters
             `
           })
           break
