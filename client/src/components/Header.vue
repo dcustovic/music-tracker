@@ -3,14 +3,18 @@
     <v-app-bar  dark src="https://media.gettyimages.com/photos/tell-me-if-i-go-off-key-please-picture-id624474514?s=2048x2048" fixed>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <v-toolbar-title @click="navigateTo ('/')">
-          <v-btn text>
+          <span class="logo" >
             Guitar Tabs
-          </v-btn>
+          </span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn text @click="navigateTo ('login')">
+        Login
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
       <v-btn text @click="navigateTo ('register')">
         Sign Up
-        <v-icon>mdi-account</v-icon>
+        <v-icon></v-icon>
       </v-btn>
     </v-app-bar>
   </div>
@@ -29,5 +33,11 @@ export default {
 <style scoped>
 .nav {
     margin-bottom: 50px;
+}
+.logo {
+  cursor: pointer;
+}
+.logo:hover {
+  color: rgb(134, 167, 255)
 }
 </style>

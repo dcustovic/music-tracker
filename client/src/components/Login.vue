@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div class="login">
     <v-container>
       <v-hover>
         <template v-slot="{ hover }">
@@ -7,7 +7,7 @@
               <section>
                 <v-col xs="12">
                   <div class="text-center">
-                    <h1 class="mt-12">Registration</h1>
+                    <h1 class="mt-12">Login</h1>
                   </div>
                 </v-col>
               </section>
@@ -19,7 +19,7 @@
                       <v-text-field
                       type="email"
                       name="email"
-                      placeholder="Enter your e-mail account"
+                      placeholder="E-mail"
                       v-model="email"
                       prepend-icon="mdi-email-outline"
                       >
@@ -28,7 +28,7 @@
                       <v-text-field
                       type="password"
                       name="password"
-                      placeholder="Enter your password"
+                      placeholder="Password"
                       v-model="password"
                       prepend-icon="mdi-format-text "
                       >
@@ -37,7 +37,7 @@
                       <div class="errortext" v-html="error" />
                       <br>
                       <br>
-                      <v-btn color="primary" @click="register">Register</v-btn>
+                      <v-btn dark color="grey" @click="login">login</v-btn>
                     </v-form>
                   </v-card-text>
                 </v-col>
@@ -76,10 +76,7 @@ export default {
 </script>
 
 <style scoped>
-.errortext {
-  color: red;
-}
-.register {
+.login {
   margin-top: 50px;
 }
 </style>
