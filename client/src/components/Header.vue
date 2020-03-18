@@ -8,11 +8,17 @@
           </span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text @click="navigateTo ('login')">
+      <v-btn text
+      @click="navigateTo ('login')"
+      v-if="!$store.state.isUserLoggedIn"
+      >
         Login
         <v-icon>mdi-account</v-icon>
       </v-btn>
-      <v-btn text @click="navigateTo ('register')">
+      <v-btn text
+      @click="navigateTo ('register')"
+      v-if="!$store.state.isUserLoggedIn"
+      >
         Sign Up
         <v-icon></v-icon>
       </v-btn>
