@@ -1,4 +1,14 @@
 const {User} = require('../models')
+const jwt = require('jsonwebtoken')
+const config = require('../config/config')
+
+// send jwt token when the user signs in
+function jwtSignUser (user) {
+    const ONE_WEEK = 60 * 60 * 24 * 7
+    return jwt.sign(user, config.authentication.jwtSecret, {
+        expiresIn: ONE_WEEK
+    })
+}
 
 //register endpoint
 module.exports = {
@@ -35,7 +45,8 @@ module.exports = {
 
          const userJSON = user.toJSON()
          res.send({
-             user: userJSON
+             user: userJSON,
+             token: jwtSignUser(userJSON) // pass token to user
          })
      } catch (err) {
         res.status(500).send({

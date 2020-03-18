@@ -10,4 +10,7 @@ export default {
 </script>
 
 <style scoped>
+.hello {
+  margin-top: 75px;
+}
 </style>

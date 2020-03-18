@@ -76,6 +76,9 @@ export default {
 </script>
 
 <style scoped>
+.errortext {
+  color: red;
+}
 .login {
   margin-top: 50px;
 }
