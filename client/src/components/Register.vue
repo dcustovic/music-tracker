@@ -15,7 +15,7 @@
               <v-row class="justify-center">
                 <v-col xs="6" sm="9" md="8">
                   <v-card-text>
-                    <v-form class="px-3" ref="form">
+                    <v-form class="px-3" ref="form" autocomplete="off">
                       <v-text-field
                       type="email"
                       name="email"
@@ -30,7 +30,8 @@
                       name="password"
                       placeholder="Enter your password"
                       v-model="password"
-                      prepend-icon="mdi-format-text "
+                      prepend-icon="mdi-format-text"
+                      autocomplete="new-password"
                       >
                       </v-text-field>
                       <br>
