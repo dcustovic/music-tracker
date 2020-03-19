@@ -3,6 +3,8 @@
         <v-col sm="6" md="6" lg="4" xl="4">
             <panel title="Create song">
                 <v-text-field class="first"
+                required
+                :rules="[required]"
                 outlined
                 dense
                 clearable
@@ -11,6 +13,8 @@
                 >
                 </v-text-field>
                 <v-text-field
+                required
+                :rules="[required]"
                 outlined
                 dense
                 clearable
@@ -19,6 +23,8 @@
                 >
                 </v-text-field>
                 <v-text-field
+                required
+                :rules="[required]"
                 outlined
                 dense
                 clearable
@@ -27,6 +33,8 @@
                 >
                 </v-text-field>
                 <v-text-field
+                required
+                :rules="[required]"
                 outlined
                 dense
                 clearable
@@ -43,6 +51,8 @@
                 >
                 </v-text-field>
                 <v-text-field
+                required
+                :rules="[required]"
                 outlined
                 dense
                 clearable
@@ -55,6 +65,8 @@
         <v-col sm="6" md="6" lg="4" xl="4">
             <panel title="Song structure">
                 <v-textarea class="second"
+                required
+                :rules="[required]"
                 outlined
                 dense
                 label="Tabs"
@@ -62,6 +74,8 @@
                 >
                 </v-textarea>
                 <v-textarea
+                required
+                :rules="[required]"
                 outlined
                 dense
                 label="Lyrics"
@@ -69,6 +83,9 @@
                 >
                 </v-textarea>
             </panel>
+            <div class="required-alert-create-song" v-if="error">
+                {{ error }}
+            </div>
             <v-btn @click="create" dark class="indigo">
                 Create song
             </v-btn>
@@ -95,11 +112,19 @@ export default {
         youtubeId: null,
         lyrics: null,
         tab: null
-      }
+      },
+      error: null,
+      required: (value) => !!value || 'Required'
     }
   },
   methods: {
     async create () {
+      this.error = null
+      const filledFields = Object.keys(this.song).every(key => !!this.song[key])
+      if (!filledFields) {
+        this.error = 'You must fill in the fields to create a song'
+        return
+      }
       try {
         await SongsService.postSong(this.song)
         this.$router.push({
@@ -127,5 +152,8 @@ export default {
 }
 .v-btn {
     margin-top: 10px;
+}
+.required-alert-create-song {
+  color: red;
 }
 </style>

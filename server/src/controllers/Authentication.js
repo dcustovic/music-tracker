@@ -22,7 +22,7 @@ module.exports = {
          })
      } catch (err) {
         res.status(400).send({
-            error: 'The email account already exists'
+            error: 'The e-mail account already exists'
         })
      }
     },

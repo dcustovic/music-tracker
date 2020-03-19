@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuelidate from 'vuelidate'
 import App from './App'
 import router from './router'
 import '@mdi/font/css/materialdesignicons.css'
@@ -11,6 +12,7 @@ const vuetifyOptions = { }
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
+Vue.use(Vuelidate)
 
 sync(store, router)
 
