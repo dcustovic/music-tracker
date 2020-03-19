@@ -5,9 +5,9 @@
       <v-toolbar-title @click="navigateTo ('/homepage')">
           <span class="logo">GuitarTabs</span>
       </v-toolbar-title>
-      <v-btn text @click="navigateTo ({ name: 'songs' })">
+      <v-btn class="ml-4" text @click="navigateTo ({ name: 'songs' })">
         Browse
-        <v-icon>mdi-chevron-double-down</v-icon>
+        <v-icon>mdi-chevron-down</v-icon>
       </v-btn>
 
       <v-spacer></v-spacer>

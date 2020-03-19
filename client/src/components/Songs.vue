@@ -1,6 +1,6 @@
 <template>
     <v-row class="justify-center">
-        <v-col xs="6" sm="9" md="8">
+        <v-col sm="8" md="8" lg="6" xl="6">
             <panel title="Songs">
                 <div v-for="song in songs" :key="song.id">
                     {{ song.title }} -
