@@ -37,7 +37,7 @@
                       <div class="errortext" v-html="error" />
                       <br>
                       <br>
-                      <v-btn dark color="grey" @click="login">login</v-btn>
+                      <v-btn dark color="primary" @click="login">login</v-btn>
                     </v-form>
                   </v-card-text>
                 </v-col>

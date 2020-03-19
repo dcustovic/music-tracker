@@ -1,13 +1,13 @@
 <template>
   <div class="nav">
     <v-app-bar dark src="https://media.gettyimages.com/photos/tell-me-if-i-go-off-key-please-picture-id624474514?s=2048x2048" fixed>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
       <v-toolbar-title @click="navigateTo ('/homepage')">
           <span class="logo">GuitarTabs</span>
       </v-toolbar-title>
       <v-btn class="ml-4" text @click="navigateTo ({ name: 'songs' })">
         Browse
-        <v-icon>mdi-chevron-down</v-icon>
+        <v-icon class="ml-2">mdi-music-note</v-icon>
       </v-btn>
 
       <v-spacer></v-spacer>

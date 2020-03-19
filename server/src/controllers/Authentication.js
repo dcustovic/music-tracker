@@ -22,7 +22,7 @@ module.exports = {
          })
      } catch (err) {
         res.status(400).send({
-            error: 'This email account already exists'
+            error: 'The email account already exists'
         })
      }
     },
@@ -36,14 +36,14 @@ module.exports = {
          })
          if (!user) {
              return res.status(403).send({
-                 error: 'Login information is incorrect'
+                 error: 'The information you provided is incorrect'
              })
          }
 
          const isPasswordCorrect = await user.comparePassword(password)
          if (!isPasswordCorrect) {
             return res.status(403).send({
-                error: 'Login information is incorrect'
+                error: 'The information you provided is incorrect'
             })
          }
 
@@ -54,7 +54,7 @@ module.exports = {
          })
      } catch (err) {
         res.status(500).send({
-            error: 'An error has occured. Please try again later'
+            error: 'An error has occured. Please try again later.'
         })
      }
     }
