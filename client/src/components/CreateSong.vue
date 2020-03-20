@@ -8,7 +8,7 @@
                 outlined
                 dense
                 clearable
-                label="Title"
+                label="Title*"
                 v-model="song.title"
                 >
                 </v-text-field>
@@ -18,7 +18,7 @@
                 outlined
                 dense
                 clearable
-                label="Artist"
+                label="Artist*"
                 v-model="song.artist"
                 >
                 </v-text-field>
@@ -28,7 +28,7 @@
                 outlined
                 dense
                 clearable
-                label="Genre"
+                label="Genre*"
                 v-model="song.genre"
                 >
                 </v-text-field>
@@ -38,7 +38,7 @@
                 outlined
                 dense
                 clearable
-                label="Album"
+                label="Album*"
                 v-model="song.album"
                 >
                 </v-text-field>
@@ -56,7 +56,7 @@
                 outlined
                 dense
                 clearable
-                label="YouTube ID"
+                label="YouTube ID*"
                 v-model="song.youtubeId"
                 >
                 </v-text-field>
@@ -69,7 +69,7 @@
                 :rules="[required]"
                 outlined
                 dense
-                label="Tabs"
+                label="Tabs*"
                 v-model="song.tab"
                 >
                 </v-textarea>
@@ -78,7 +78,7 @@
                 :rules="[required]"
                 outlined
                 dense
-                label="Lyrics"
+                label="Lyrics*"
                 v-model="song.lyrics"
                 >
                 </v-textarea>
@@ -154,6 +154,7 @@ export default {
     margin-top: 10px;
 }
 .required-alert-create-song {
+  margin: 15px 0px;
   color: red;
 }
 </style>
