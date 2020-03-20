@@ -25,7 +25,9 @@
                       </v-btn>
                     </v-col>
                     <v-col>
-                      <img :src="song.albumImageUrl" class="album-image mt-12" />
+                      <v-card raised shaped class="mx-auto" max-width="200">
+                        <v-img width="200" :src="song.albumImageUrl" class="album-image mt-12" />
+                      </v-card>
                     </v-col>
                   </v-row>
                 </div>
@@ -61,13 +63,13 @@ export default {
 
 <style scoped>
 .song-title {
-  font-size: 30px;
+  font-size: 27px;
 }
 .song-artist {
-  font-size: 22px;
+  font-size: 21px;
 }
 .song-genre {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 10px;
 }
 .album-image {

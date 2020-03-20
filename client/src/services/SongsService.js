@@ -4,6 +4,9 @@ export default {
   getSongs () {
     return Api().get('songs') // songs is an endpoint
   },
+  show (songId) {
+    return Api().get(`songs/${songId}`)
+  },
   postSong (song) {
     return Api().post('songs', song) // songs is an endpoint, song is the data structure
   }

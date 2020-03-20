@@ -3,7 +3,7 @@
     <v-container>
       <v-hover>
         <template v-slot="{ hover }">
-          <v-card class="mx-auto" max-width="550" height="570" :elevation="hover ? 5 : 3">
+          <v-card class="mx-auto" max-width="550" height="600" :elevation="hover ? 5 : 3">
               <section>
                 <v-col xs="12">
                   <div class="text-center">
@@ -109,6 +109,6 @@ export default {
   color: red;
 }
 .login {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 </style>

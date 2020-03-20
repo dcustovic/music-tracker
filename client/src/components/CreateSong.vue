@@ -52,11 +52,10 @@
                 </v-text-field>
                 <v-text-field
                 required
-                :rules="[required]"
                 outlined
                 dense
                 clearable
-                label="YouTube ID*"
+                label="YouTube ID"
                 v-model="song.youtubeId"
                 >
                 </v-text-field>
@@ -122,7 +121,7 @@ export default {
       this.error = null
       const filledFields = Object.keys(this.song).every(key => !!this.song[key])
       if (!filledFields) {
-        this.error = 'You must fill in the fields to create a song'
+        this.error = 'You must fill in the required fields'
         return
       }
       try {
