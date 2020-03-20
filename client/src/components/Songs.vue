@@ -1,16 +1,17 @@
 <template>
     <v-row class="justify-center">
-        <v-col sm="8" md="8" lg="6" xl="6">
+        <v-col sm="9" md="9" lg="7" xl="5">
             <panel title="Songs">
                 <v-btn to="/songs/create" fab light right absolute
-                class="green accent-3"
+                class="cyan accent-3"
                 slot="action">
                   <v-icon medium>mdi-plus</v-icon>
                 </v-btn>
                 <div class="song" v-for="song in songs" :key="song.id">
                   <v-row>
                     <v-col>
-                      <div class="song-title">
+                      <hr>
+                      <div class="song-title mt-12">
                         {{ song.title }}
                       </div>
                       <div class="song-artist">
@@ -24,7 +25,7 @@
                       </v-btn>
                     </v-col>
                     <v-col>
-                      <img :src="song.albumImageUrl" class="album-image" />
+                      <img :src="song.albumImageUrl" class="album-image mt-12" />
                     </v-col>
                   </v-row>
                 </div>

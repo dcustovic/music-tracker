@@ -1,6 +1,6 @@
 <template>
     <v-row class="justify-start">
-        <v-col sm="6" md="6" lg="4" xl="4">
+        <v-col sm="6" md="6" lg="5" xl="4">
             <panel title="Create song">
                 <v-text-field class="first"
                 required
@@ -62,7 +62,7 @@
                 </v-text-field>
             </panel>
         </v-col>
-        <v-col sm="6" md="6" lg="4" xl="4">
+        <v-col sm="6" md="6" lg="5" xl="4">
             <panel title="Song structure">
                 <v-textarea class="second"
                 required

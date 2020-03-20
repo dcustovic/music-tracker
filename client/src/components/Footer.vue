@@ -1,5 +1,5 @@
 <template>
-  <v-footer absolute dark color="grey darken-2">
+  <v-footer dark color="grey darken-2">
     <v-row justify="center" class="mt-3">
       GuitarTabs • Vue
     </v-row>
@@ -24,5 +24,8 @@
 }
 .mdi-youtube:hover {
     color: rgb(247, 58, 58);
+}
+.v-footer  {
+ margin-top: auto;
 }
 </style>
