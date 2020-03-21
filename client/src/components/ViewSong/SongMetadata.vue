@@ -1,4 +1,5 @@
 <template>
+<div>
     <panel title="Song metadata">
         <v-row>
             <v-col class="my-auto">
@@ -14,14 +15,22 @@
                 <div class="song-album">
                 </div>
             </v-col>
-            <v-col >
+
+            <v-col>
                 <v-card raised shaped class="mb-12 mx-auto" max-width="200">
                     <v-img width="200" :src="song.albumImageUrl" class="album-image mt-12" />
                     {{ song.album }}
                 </v-card>
             </v-col>
         </v-row>
+        <v-btn
+          rounded
+          @click="navigateTo ({name: 'song-edit', params: {songId: song.id}})"
+          class="primary">
+          Edit
+        </v-btn>
     </panel>
+    </div>
 </template>
 
 <script>
@@ -33,6 +42,11 @@ export default {
   ],
   components: {
     Panel
+  },
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
   }
 }
 </script>
