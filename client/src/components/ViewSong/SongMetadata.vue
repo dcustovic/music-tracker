@@ -1,8 +1,8 @@
 <template>
     <panel title="Song metadata">
         <v-row>
-            <v-col>
-                <div class="song-title mt-12">
+            <v-col class="my-auto">
+                <div class="song-title">
                     {{ song.title }}
                 </div>
                 <div class="song-artist">
@@ -14,11 +14,11 @@
                 <div class="song-album">
                 </div>
             </v-col>
-            <v-col>
-                <v-card raised shaped class="mx-auto" max-width="200">
+            <v-col >
+                <v-card raised shaped class="mb-12 mx-auto" max-width="200">
                     <v-img width="200" :src="song.albumImageUrl" class="album-image mt-12" />
-                </v-card>
                     {{ song.album }}
+                </v-card>
             </v-col>
         </v-row>
     </panel>

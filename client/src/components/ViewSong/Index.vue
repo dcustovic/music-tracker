@@ -1,35 +1,34 @@
 <template>
-  <div>
-    <v-row>
-        <v-col sm="6" md="5" lg="5" xl="5">
+    <v-row class="justify-center">
+      <!-- METADATA -->
+        <v-col cols="12" sm="10" md="8" lg="6" xl="5">
           <song-metadata :song="song" />
         </v-col>
 
-        <v-row>
-            <v-col>
-                <panel title="YouTube">
-                    <!-- youtube embedded -->
-                </panel>
-            </v-col>
-        </v-row>
+      <!-- YOUTUBE -->
+        <v-col cols="12" sm="10" md="12" lg="6" xl="5">
+          <you-tube :youtubeId="song.youtubeId" />
+        </v-col>
 
-        <v-col sm="6" md="7" lg="7" xl="7">
-            <panel title="Tabs">
-                <textarea
-                readonly
-                v-model="song.tab"
-                >
-                </textarea>
-            </panel>
+      <!-- TABS -->
+        <v-col cols="12" sm="10" md="12" lg="8" xl="7">
+          <tab :song="song" />
+        </v-col>
+
+      <!-- LYRICS -->
+        <v-col cols="12" sm="10" md="12" lg="4" xl="4">
+          <lyrics :song="song" />
         </v-col>
     </v-row>
-  </div>
 </template>
 
 <script>
-import SongMetadata from './SongMetadata'
 import SongsService from '@/services/SongsService'
 import Panel from '@/components/Panel'
+import SongMetadata from './SongMetadata'
+import YouTube from './YouTube'
+import Lyrics from './Lyrics'
+import Tab from './Tab'
 
 export default {
   data () {
@@ -43,7 +42,10 @@ export default {
   },
   components: {
     Panel,
-    SongMetadata
+    SongMetadata,
+    YouTube,
+    Lyrics,
+    Tab
   }
 }
 </script>
