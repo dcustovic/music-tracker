@@ -9,5 +9,8 @@ export default {
   },
   postSong (song) {
     return Api().post('songs', song) // songs is an endpoint, song is the data structure
+  },
+  put (song) {
+    return Api().put(`songs/${song.id}`, song) // songs is an endpoint, song is the data structure
   }
 }
