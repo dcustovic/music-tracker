@@ -1,5 +1,5 @@
 <template>
-    <panel title="YouTube Video">
+    <panel title="YouTube video">
         <youtube
         :video-id="youtubeId"
         player-width="420"
@@ -9,15 +9,11 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
 
 export default {
   props: [
     'youtubeId'
-  ],
-  components: {
-    Panel
-  }
+  ]
 }
 </script>
 

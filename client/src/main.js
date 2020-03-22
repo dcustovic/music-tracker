@@ -8,6 +8,7 @@ import { sync } from 'vuex-router-sync'
 import store from '@/store/store'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import Panel from '@/components/global/Panel'
 const vuetifyOptions = { }
 
 Vue.config.productionTip = false
@@ -15,6 +16,8 @@ Vue.config.productionTip = false
 Vue.use(VueYouTubeEmbed)
 Vue.use(Vuetify)
 Vue.use(Vuelidate)
+
+Vue.component('panel', Panel)
 
 sync(store, router)
 

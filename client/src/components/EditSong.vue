@@ -1,6 +1,6 @@
 <template>
-    <v-row class="justify-start">
-        <v-col sm="6" md="6" lg="5" xl="4">
+    <v-row class="justify-center">
+        <v-col cols="11" sm="9" md="5" lg="5" xl="3">
             <panel title="Create song">
                 <v-text-field class="first"
                 required
@@ -61,7 +61,7 @@
                 </v-text-field>
             </panel>
         </v-col>
-        <v-col sm="6" md="6" lg="5" xl="4">
+        <v-col cols="11" sm="9" md="7" lg="7" xl="6">
             <panel title="Song structure">
                 <v-textarea class="second"
                 required
@@ -94,12 +94,8 @@
 
 <script>
 import SongsService from '@/services/SongsService'
-import Panel from '@/components/Panel'
 
 export default {
-  components: {
-    Panel
-  },
   data () {
     return {
       song: {

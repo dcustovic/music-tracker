@@ -114,5 +114,6 @@ export default {
 }
 .register {
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 </style>

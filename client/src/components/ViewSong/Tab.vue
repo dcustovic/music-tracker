@@ -1,5 +1,5 @@
 <template>
-  <panel title="Tab">
+  <panel title="Tabs">
     <v-row>
       <v-col>
         <textarea
@@ -12,15 +12,11 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
 
 export default {
   props: [
     'song'
-  ],
-  components: {
-    Panel
-  }
+  ]
 }
 </script>
 

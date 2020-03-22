@@ -7,7 +7,7 @@
       </v-toolbar-title>
       <v-btn class="ml-4" text @click="navigateTo ({ name: 'songs' })">
         Browse
-        <v-icon class="ml-2">mdi-music-note</v-icon>
+        <v-icon class="ml-2">mdi-format-align-left</v-icon>
       </v-btn>
 
       <v-spacer></v-spacer>
