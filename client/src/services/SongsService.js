@@ -1,8 +1,12 @@
 import Api from '@/services/Api'
 
 export default {
-  getSongs () {
-    return Api().get('songs') // songs is an endpoint
+  getSongs (search) {
+    return Api().get('songs', {
+      params: {
+        search: search
+      }
+    }) // songs is an endpoint, params: search is the key word for http://localhost:8080/#/songs?search=, and the second search is actually the search
   },
   show (songId) {
     return Api().get(`songs/${songId}`)

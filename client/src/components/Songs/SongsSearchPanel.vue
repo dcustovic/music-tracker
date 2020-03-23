@@ -1,6 +1,7 @@
 <template>
     <panel title="Search" >
         <v-text-field class="line"
+            clearable
             placeholder="Search by title, artist, album or genre"
             v-model="search"
             prepend-icon="mdi-music-note"
@@ -10,6 +11,8 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
   data () {
     return {
@@ -17,9 +20,9 @@ export default {
     }
   },
   watch: {
-    search (value) {
+    search: _.debounce(async function (value) {
       const route = {
-        name: 'songs'
+        path: 'songs'
       }
       if (this.search !== '') {
         route.query = {
@@ -27,7 +30,7 @@ export default {
         }
       }
       this.$router.push(route)
-    },
+    }, 500),
     '$route.query.search': {
       immediate: true,
       handler (value) {
