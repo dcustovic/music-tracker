@@ -2,21 +2,28 @@
   <div class="nav">
     <v-app-bar dark src="https://media.gettyimages.com/photos/tell-me-if-i-go-off-key-please-picture-id624474514?s=2048x2048" fixed>
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
-      <v-toolbar-title @click="navigateTo ('/homepage')">
-          <span class="logo">GuitarTabs</span>
+      <v-toolbar-title>
+          <router-link
+          class="logo"
+          tag="span"
+          :to="{
+            name: 'songs'
+          }"
+          >GuitarTabs
+          </router-link>
       </v-toolbar-title>
-      <v-btn class="ml-4" text @click="navigateTo ({ name: 'songs' })">
+      <v-btn class="ml-4" text :to="{ name: 'songs' }">
         Browse
         <v-icon class="ml-2">mdi-format-align-left</v-icon>
       </v-btn>
 
       <v-spacer></v-spacer>
 
-      <v-btn text @click="navigateTo ('login')" v-if="!$store.state.isUserLoggedIn">
+      <v-btn text :to="{ name: 'login' }" v-if="!$store.state.isUserLoggedIn">
         Login
         <v-icon>mdi-account</v-icon>
       </v-btn>
-      <v-btn text @click="navigateTo ('register')" v-if="!$store.state.isUserLoggedIn">
+      <v-btn text :to="{ name: 'register'}" v-if="!$store.state.isUserLoggedIn">
         Sign Up
         <v-icon></v-icon>
       </v-btn>
@@ -31,13 +38,10 @@
 <script>
 export default {
   methods: {
-    navigateTo (route) {
-      this.$router.push(route)
-    },
     logout () {
       this.$store.dispatch('setToken', null)
       this.$store.dispatch('setToken', null)
-      this.$router.push({ name: 'HelloWorld' })
+      this.$router.push({ name: 'songs' })
     }
   }
 }

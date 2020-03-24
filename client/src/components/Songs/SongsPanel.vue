@@ -18,7 +18,12 @@
                 <div class="song-genre">
                 {{ song.genre }}
                 </div>
-                <v-btn rounded @click="navigateTo ({name: 'song', params: {songId: song.id}})" class="primary">
+                <v-btn rounded
+                :to="{
+                  name: 'song',
+                  params: {songId: song.id}
+                  }"
+                  class="primary">
                 View
                 </v-btn>
             </v-col>
@@ -39,11 +44,6 @@ export default {
   data () {
     return {
       songs: null
-    }
-  },
-  methods: {
-    navigateTo (route) {
-      this.$router.push(route)
     }
   },
   watch: {
