@@ -1,7 +1,7 @@
 <template>
   <div class="panel">
-    <v-container>
-      <v-card color="grey lighten-4">
+
+      <v-card color="grey lighten-3">
             <v-toolbar dense dark class="indigo">
                 <v-toolbar-title>{{ title }}
                 </v-toolbar-title>
@@ -14,7 +14,7 @@
                 </slot>
             </div>
       </v-card>
-    </v-container>
+
   </div>
 </template>
 
@@ -30,5 +30,6 @@ export default {
 <style scoped>
 .panel {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 </style>

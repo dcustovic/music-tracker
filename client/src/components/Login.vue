@@ -3,7 +3,7 @@
     <v-container>
       <v-hover>
         <template v-slot="{ hover }">
-          <v-card class="mx-auto" max-width="550" height="600" :elevation="hover ? 5 : 3">
+          <v-card class="mx-auto" max-width="550" height="600" :elevation="hover ? 10 : 6">
               <section>
                 <v-col xs="12">
                   <div class="text-center">
@@ -43,7 +43,7 @@
                       <div class="errortext" v-html="error" />
                       <br>
                       <br>
-                      <v-btn dark color="primary" @click="login">login</v-btn>
+                      <v-btn dark color="primary" @click="login" @keyup.enter="register">login</v-btn>
                     </v-form>
                   </v-card-text>
                 </v-col>

@@ -4,6 +4,7 @@ const SongsController = require('./controllers/SongsController')
 
 // routes hit endpoints
 module.exports = (app) => {
+
     app.post('/register',
     AuthenticationPolicy.register,
     Authentication.register)
@@ -21,6 +22,5 @@ module.exports = (app) => {
     SongsController.post)
 
     app.put('/songs/:songId',
-    SongsController.put
-    )
+    SongsController.put)
 }

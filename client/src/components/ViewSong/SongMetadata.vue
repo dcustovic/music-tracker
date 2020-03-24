@@ -2,38 +2,38 @@
 <div>
     <panel title="Song metadata">
         <v-row>
+            <v-col>
+              <v-card class="ml-11 mb-9" raised  max-width="220" max-height="250">
+                  <v-img width="220" height="250" :src="song.albumImageUrl" class="album-image mt-12" />
+              </v-card>
+            </v-col>
             <v-col class="my-auto">
+                <div class="song-album">
+                  {{ song.album }}
+                </div>
                 <div class="song-title">
                     {{ song.title }}
                 </div>
+                <br>
                 <div class="song-artist">
                     {{ song.artist }}
                 </div>
                 <div class="song-genre">
                     {{ song.genre }}
                 </div>
-                <div class="song-album">
-                </div>
-            </v-col>
-
-            <v-col>
-                <v-card raised shaped class="mb-12 mx-auto" max-width="200">
-                    <v-img width="200" :src="song.albumImageUrl" class="album-image mt-12" />
-                    {{ song.album }}
-                </v-card>
+                <v-btn
+                  rounded
+                  :to="{
+                    name: 'song-edit',
+                    params: {songId: song.id}
+                    }"
+                  class="primary mt-3">
+                  Edit
+                </v-btn>
             </v-col>
         </v-row>
-        <v-btn
-          rounded
-          :to="{
-            name: 'song-edit',
-            params: {songId: song.id}
-            }"
-          class="primary">
-          Edit
-        </v-btn>
     </panel>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -45,23 +45,21 @@ export default {
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.song-album {
+  font-size: 40px;
+}
 .song-title {
-  font-size: 27px;
+  font-size: 25px;
 }
 .song-artist {
-  font-size: 21px;
+  font-size: 20px;
 }
 .song-genre {
   font-size: 15px;
-  margin-bottom: 10px;
-}
-.album-image {
-  width: 70%;
-  margin: 0 auto;
-}
-.song {
-  padding: 20px;
-  height: 290px;
-  overflow: hidden;
 }
 </style>

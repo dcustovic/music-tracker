@@ -72,7 +72,7 @@
                 v-model="song.tab"
                 >
                 </v-textarea>
-                <v-textarea
+                <v-textarea class="second"
                 required
                 :rules="[required]"
                 outlined
@@ -153,6 +153,7 @@ export default {
 }
 .second {
     margin-top: 25px;
+    width: 80% !important;
 }
 .v-text-field {
     width: 70%;
