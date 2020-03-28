@@ -2,12 +2,12 @@
 <v-container>
     <v-row class="justify-center">
       <!-- METADATA -->
-        <v-col cols="10" sm="11" md="11" lg="6" xl="5">
+        <v-col cols="10" sm="11" md="11" lg="6" xl="6">
           <song-metadata :song="song" />
         </v-col>
 
       <!-- YOUTUBE -->
-        <v-col cols="10" sm="11" md="11" lg="6" xl="3">
+        <v-col cols="10" sm="11" md="11" lg="6" xl="6">
           <you-tube :youtubeId="song.youtubeId" />
         </v-col>
 
@@ -17,7 +17,7 @@
         </v-col>
 
       <!-- LYRICS -->
-        <v-col cols="10" sm="11" md="11" lg="5" xl="4">
+        <v-col cols="10" sm="11" md="11" lg="5" xl="5">
           <lyrics :song="song" />
         </v-col>
     </v-row>
