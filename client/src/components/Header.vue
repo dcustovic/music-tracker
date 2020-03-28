@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <v-app-bar dark src="https://media.gettyimages.com/photos/tell-me-if-i-go-off-key-please-picture-id624474514?s=2048x2048" fixed>
+    <v-app-bar fixed dark src="https://media.gettyimages.com/photos/man-playing-guitar-on-stage-picture-id820375234?s=2048x2048">
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
       <v-toolbar-title>
           <router-link
@@ -54,7 +54,9 @@ export default {
 .logo {
   cursor: pointer;
 }
+/*
 .logo:hover {
   color: rgb(134, 167, 255)
 }
+*/
 </style>

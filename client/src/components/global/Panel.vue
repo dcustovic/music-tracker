@@ -1,7 +1,7 @@
 <template>
   <div class="panel">
       <v-card color="grey lighten-3">
-            <v-toolbar dense dark class="indigo">
+            <v-toolbar dense dark color="indigo darken-1">
                 <v-toolbar-title>{{ title }}
                 </v-toolbar-title>
             <slot name="action" />

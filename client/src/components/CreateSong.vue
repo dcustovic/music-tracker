@@ -82,10 +82,10 @@
                 >
                 </v-textarea>
             </panel>
-            <div class="required-alert-create-song" v-if="error">
+            <div class="required-alert-create-song mt-5" v-if="error">
                 {{ error }}
             </div>
-            <v-btn @click="create" dark class="indigo">
+            <v-btn @click="create" dark class="indigo mt-3">
               <v-icon class="mr-2">mdi-music</v-icon>
                 Create song
             </v-btn>
