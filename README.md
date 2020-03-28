@@ -1,17 +1,24 @@
 # music-tracker
-Made a Vue / Express web app for keeping track of guitar tabs
+Made a Vue/Express/MySQL web app for keeping track of guitar tabs
 
 # Setup
-You must have Node.js intalled.
+You must have Node.js installed.
 
-Client side
+Client side - Terminal A
 
-cd client
-npm install
-npm start
 
-Server side
+• cd client
 
-cd server
-npm install
-npm start
+• npm install
+
+• npm start
+
+---
+Server side - Terminal B
+
+
+• cd server
+
+• npm install
+
+• npm start
