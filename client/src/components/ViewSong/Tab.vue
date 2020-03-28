@@ -31,4 +31,7 @@ textarea {
   overflow: auto;
   padding: 40px;
 }
+.panel {
+  margin-top: 0px;
+}
 </style>

@@ -5,7 +5,7 @@
         <template v-slot="{ hover }">
           <v-card class="mx-auto" max-width="550" height="600" :elevation="hover ? 10 : 6">
               <section>
-                <v-col xs="12">
+                <v-col cols="12">
                   <div class="text-center">
                     <h1 class="mt-12">Login</h1>
                   </div>
@@ -13,10 +13,11 @@
               </section>
 
               <v-row class="justify-center">
-                <v-col xs="6" sm="9" md="8">
+                <v-col cols="11" sm="9" md="8">
                   <v-card-text>
                     <v-form class="px-3" ref="form">
                       <v-text-field
+                      required
                       type="email"
                       name="email"
                       placeholder="E-mail"

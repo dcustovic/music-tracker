@@ -1,7 +1,7 @@
 <template>
     <v-row class="justify-center">
         <v-col cols="11" sm="9" md="5" lg="5" xl="3">
-            <panel title="Create song">
+            <panel title="Edit song">
                 <v-text-field class="first"
                 required
                 :rules="[required]"
@@ -86,6 +86,7 @@
                 {{ error }}
             </div>
             <v-btn @click="save" dark class="indigo">
+              <v-icon class="mr-2">mdi-content-save-all</v-icon>
                 Save song
             </v-btn>
         </v-col>

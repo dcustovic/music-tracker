@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .line {
-    width: 92%;
+    width: 93%;
     margin-left: 8px;
 }
 </style>

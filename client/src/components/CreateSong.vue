@@ -86,6 +86,7 @@
                 {{ error }}
             </div>
             <v-btn @click="create" dark class="indigo">
+              <v-icon class="mr-2">mdi-music</v-icon>
                 Create song
             </v-btn>
         </v-col>

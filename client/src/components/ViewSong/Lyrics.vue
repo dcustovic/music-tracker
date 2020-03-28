@@ -1,9 +1,15 @@
 <template>
   <panel title="Lyrics">
-    <textarea
-      readonly
-      v-model="song.lyrics"
-    ></textarea>
+    <v-row>
+      <v-col>
+        <textarea
+          readonly
+          v-model="song.lyrics"
+        >
+        </textarea>
+      </v-col>
+    </v-row>
+
   </panel>
 </template>
 
@@ -26,5 +32,8 @@ textarea {
   border-color: transparent;
   overflow: auto;
   padding: 40px;
+}
+.panel {
+  margin-top: 0px;
 }
 </style>

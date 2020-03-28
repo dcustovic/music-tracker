@@ -1,7 +1,7 @@
 <template>
 <div>
-    <panel title="Song metadata">
-        <v-row>
+    <panel title="Song details">
+        <v-row >
             <v-col>
               <v-card class="ml-11 mb-9" raised  max-width="220" max-height="250">
                   <v-img width="220" height="250" :src="song.albumImageUrl" class="album-image mt-12" />
@@ -27,7 +27,7 @@
                     name: 'song-edit',
                     params: {songId: song.id}
                     }"
-                  class="primary mt-3">
+                  class="primary my-3">
                   Edit
                 </v-btn>
             </v-col>
@@ -51,13 +51,13 @@ export default {
   border: none;
 }
 .song-album {
-  font-size: 40px;
+  font-size: 31px;
 }
 .song-title {
-  font-size: 25px;
+  font-size: 23px;
 }
 .song-artist {
-  font-size: 20px;
+  font-size: 19px;
 }
 .song-genre {
   font-size: 15px;

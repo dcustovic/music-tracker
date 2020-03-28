@@ -1,8 +1,14 @@
 <template>
     <v-row class="justify-center">
-        <v-col sm="9" md="9" lg="7" xl="5">
+        <v-col v-if="isUserLoggedIn" cols="10" sm="9" md="9" lg="7" xl="5">
           <songs-search-panel />
           <songs-panel />
+        </v-col>
+        <v-col v-else cols="10" sm="9" md="9" lg="7" xl="5">
+          <panel
+          title="Songs"
+          description="Please login to see your content."
+          />
         </v-col>
     </v-row>
 </template>
@@ -11,6 +17,7 @@
 import SongsPanel from './SongsPanel'
 import SongsSearchPanel from './SongsSearchPanel'
 import SongsService from '@/services/SongsService'
+import {mapState} from 'vuex'
 
 export default {
   components: {
@@ -21,6 +28,11 @@ export default {
     return {
       songs: null
     }
+  },
+  computed: {
+    ...mapState([
+      'isUserLoggedIn'
+    ])
   },
   async mounted () {
     // do a req to the backend for all songs
