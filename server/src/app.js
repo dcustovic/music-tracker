@@ -13,10 +13,10 @@ app.use(bodyParser.json())
 
 require('./routes')(app)
 
-app.use(express.static('dist'));
 app.get(/.*/, function(req, res) {
 	res.sendFile(__dirname + '/dist/index.html');
 });
+app.use(express.static('dist'));
 
 sequelize.sync({force: false}).then(() => {
     app.listen(config.port)
