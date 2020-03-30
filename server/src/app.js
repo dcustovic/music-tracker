@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const {sequelize} = require('./models')
 const config = require('./config/config')
+const path = require('path');
 
 const app = express()
 app.use(morgan('combined'))
@@ -15,6 +16,8 @@ require('./routes')(app)
 app.get('/', function (req, res) {
   res.sendFile('./dist/index.html');
 });
+
+app.use('/', express.static(path.join(__dirname, 'dist')));
 
 sequelize.sync({force: false}).then(() => {
     app.listen(config.port)
