@@ -13,9 +13,9 @@ app.use(bodyParser.json())
 
 require('./routes')(app)
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
-})
+app.get('/', function(req, res) {
+    res.sendFile('index.html', { root: __dirname });
+});
 
 sequelize.sync({force: false}).then(() => {
     app.listen(config.port)
