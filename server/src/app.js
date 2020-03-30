@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 require('./routes')(app)
 
 app.get(/.*/, function(req, res) {
-	res.sendFile(__dirname + '/dist/index.html');
+	res.sendFile(__dirname + './dist/index.html');
 });
 
 sequelize.sync({force: false}).then(() => {
