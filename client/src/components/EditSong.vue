@@ -1,6 +1,6 @@
 <template>
     <v-row class="justify-center">
-        <v-col cols="11" sm="9" md="5" lg="5" xl="3">
+        <v-col cols="12" sm="9" md="5" lg="5" xl="3">
             <panel title="Edit song">
                 <v-text-field class="first"
                 required
@@ -61,7 +61,7 @@
                 </v-text-field>
             </panel>
         </v-col>
-        <v-col cols="11" sm="9" md="7" lg="7" xl="6">
+        <v-col cols="12" sm="9" md="7" lg="7" xl="6">
             <panel title="Song structure">
                 <v-textarea class="second"
                 required

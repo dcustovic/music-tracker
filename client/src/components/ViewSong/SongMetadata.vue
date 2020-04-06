@@ -1,13 +1,13 @@
 <template>
 <div>
     <panel title="Song details">
-        <v-row >
+        <v-row>
             <v-col>
-              <v-card class="ml-11 mb-9 mr-9" raised  max-width="220" max-height="250">
+              <v-card class="mx-auto mb-8" raised  max-width="220" max-height="250">
                   <v-img width="220" height="250" :src="song.albumImageUrl" class="album-image mt-12" />
               </v-card>
             </v-col>
-            <v-col class="my-auto mr-10">
+            <v-col class="mx-12 my-10">
                 <div class="song-album">
                   {{ song.album }}
                 </div>

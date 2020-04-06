@@ -16,11 +16,11 @@ require('./routes')(app)
 app.get(/.*/, function(req, res) {
 	res.sendFile(__dirname + '/dist/index.html');
 });
-app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 sequelize.sync({force: false}).then(() => {
     app.listen(config.port)
-    console.log(`Server started on port ${config.port}`)
+    console.log('info', `Server started on port ${config.port}`)
 })
 
 

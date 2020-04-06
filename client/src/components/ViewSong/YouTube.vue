@@ -4,8 +4,8 @@
       <v-col>
         <youtube
         :video-id="youtubeId"
-        player-width="500"
-        player-height="303"
+        player-width="300"
+        player-height="300"
         />
       </v-col>
     </v-row>

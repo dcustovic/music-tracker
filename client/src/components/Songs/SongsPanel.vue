@@ -28,8 +28,8 @@
                 </v-btn>
               </v-col>
               <v-col>
-                <v-card raised shaped class="mx-auto" max-width="200">
-                <v-img width="200" :src="song.albumImageUrl" class="album-image mt-12" />
+                <v-card raised shaped max-width="200" class="mx-auto">
+                  <v-img aspect-ratio="1" :src="song.albumImageUrl" class="album-image mt-12"/>
                 </v-card>
               </v-col>
             </v-row>
@@ -69,7 +69,7 @@ export default {
   margin-bottom: 10px;
 }
 .album-image {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 .song {

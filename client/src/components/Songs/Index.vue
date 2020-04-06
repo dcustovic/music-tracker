@@ -1,10 +1,10 @@
 <template>
     <v-row class="justify-center">
-        <v-col v-if="isUserLoggedIn" cols="10" sm="9" md="9" lg="7" xl="5">
+        <v-col v-if="isUserLoggedIn" cols="12" sm="10" md="9" lg="7" xl="5">
           <songs-search-panel />
           <songs-panel />
         </v-col>
-        <v-col v-else cols="10" sm="9" md="9" lg="7" xl="5">
+        <v-col v-else cols="12" sm="10" md="9" lg="7" xl="5">
           <panel
           title="Songs"
           description="Please login to see your content."
