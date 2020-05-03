@@ -1,5 +1,5 @@
 # music-tracker
-Made a Vue/Express/MySQL web app for keeping track of guitar tabs
+Fullstack app for adding songs & tabs using Vue, Express, MySQL
 
 # Setup
 You must have Node.js installed.
