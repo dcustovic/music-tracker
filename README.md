@@ -1,5 +1,5 @@
 # music-tracker
-Fullstack app for adding songs & tabs using Vue, Express, MySQL
+Fullstack app for adding songs & tabs using Vue, Express & MySQL
 
 # How to use
 You must have Node.js installed.
